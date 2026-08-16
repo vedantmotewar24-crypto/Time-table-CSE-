@@ -1,10 +1,10 @@
-window.TIMETABLE_DATA = {
+const timetableData = {
   "metadata": {
     "title": "COEP Technological University - Department of Computer Science & Engineering Timetables",
     "academic_year": "Odd Sem 26-27",
     "effective_date": "3 Aug 26",
     "total_divisions": 4,
-    "total_entries": 136,
+    "total_entries": 133,
     "divisions": [
       "SY CSE Div 1",
       "SY CSE Div 2",
@@ -822,19 +822,6 @@ window.TIMETABLE_DATA = {
     {
       "division": "SY CSE Div 3",
       "day": "Monday",
-      "time_slot": "09:30 - 10:30",
-      "subject_name": "Matrices, Differential Calculus and Probability",
-      "subject_code": "MDCP",
-      "faculty": "Maths Teacher1",
-      "room_number": "NC-14",
-      "room_name": "NC-14,, 4th Floor, Academic Compex",
-      "batch": "SY3-S6(DSY)",
-      "session_type": "Lecture",
-      "raw_cell_text": "SY3-S6(\nDSY)\nMDCP\nNC-14"
-    },
-    {
-      "division": "SY CSE Div 3",
-      "day": "Monday",
       "time_slot": "10:30 - 12:30",
       "subject_name": "Microprocessors Lab",
       "subject_code": "MP Lab",
@@ -926,19 +913,6 @@ window.TIMETABLE_DATA = {
     {
       "division": "SY CSE Div 3",
       "day": "Tuesday",
-      "time_slot": "09:30 - 10:30",
-      "subject_name": "Matrices, Differential Calculus and Probability",
-      "subject_code": "MDCP",
-      "faculty": "Maths Teacher1",
-      "room_number": "NC-14",
-      "room_name": "NC-14,, 4th Floor, Academic Compex",
-      "batch": "SY3-S6(DSY)",
-      "session_type": "Lecture",
-      "raw_cell_text": "SY3-S6(\nDSY)\nMDCP\nNC-14"
-    },
-    {
-      "division": "SY CSE Div 3",
-      "day": "Tuesday",
       "time_slot": "10:30 - 12:30",
       "subject_name": "Microprocessors Lab",
       "subject_code": "MP Lab",
@@ -948,19 +922,6 @@ window.TIMETABLE_DATA = {
       "batch": "SY3-S2",
       "session_type": "Lab",
       "raw_cell_text": "SY3-S2\nISL MP Lab"
-    },
-    {
-      "division": "SY CSE Div 3",
-      "day": "Tuesday",
-      "time_slot": "15:30 - 17:30",
-      "subject_name": "Microprocessors Lab",
-      "subject_code": "MP Lab",
-      "faculty": "Snehal Banarase",
-      "room_number": "ISL",
-      "room_name": "Information Security Lab, 3rd Floor, ENTC Extension Building",
-      "batch": "SY3-S6(DSY)",
-      "session_type": "Lab",
-      "raw_cell_text": "SY3-S6(DSY)\nISL MP Lab"
     },
     {
       "division": "SY CSE Div 3",
@@ -978,19 +939,6 @@ window.TIMETABLE_DATA = {
     {
       "division": "SY CSE Div 3",
       "day": "Tuesday",
-      "time_slot": "15:30 - 17:30",
-      "subject_name": "Data Structures and Algorithms Lab",
-      "subject_code": "DSA Lab",
-      "faculty": "Prachiti Deshpande",
-      "room_number": "PL",
-      "room_name": "Programming Lab, Ground Floor, CSE Dept",
-      "batch": "SY3-S1",
-      "session_type": "Lab",
-      "raw_cell_text": "SY3-S1\nPL DSA\nLab"
-    },
-    {
-      "division": "SY CSE Div 3",
-      "day": "Tuesday",
       "time_slot": "10:30 - 12:30",
       "subject_name": "Principles of Programming Languages Lab",
       "subject_code": "PPL Lab",
@@ -1000,19 +948,6 @@ window.TIMETABLE_DATA = {
       "batch": "SY3-S4",
       "session_type": "Lab",
       "raw_cell_text": "SY3-S4\nDBMSL PPL Lab"
-    },
-    {
-      "division": "SY CSE Div 3",
-      "day": "Tuesday",
-      "time_slot": "15:30 - 17:30",
-      "subject_name": "Principles of Programming Languages Lab",
-      "subject_code": "PPL Lab",
-      "faculty": "Afsha Akkalkot",
-      "room_number": "DBMSL",
-      "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-      "batch": "SY3-S2",
-      "session_type": "Lab",
-      "raw_cell_text": "SY3-S2\nDBMSL PPL Lab"
     },
     {
       "division": "SY CSE Div 3",
@@ -1026,19 +961,6 @@ window.TIMETABLE_DATA = {
       "batch": "ALL",
       "session_type": "Lecture",
       "raw_cell_text": "ENTSP\nNC-01"
-    },
-    {
-      "division": "SY CSE Div 3",
-      "day": "Wednesday",
-      "time_slot": "09:30 - 10:30",
-      "subject_name": "Matrices, Differential Calculus and Probability",
-      "subject_code": "MDCP",
-      "faculty": "Maths Teacher1",
-      "room_number": "NC-14",
-      "room_name": "NC-14,, 4th Floor, Academic Compex",
-      "batch": "SY3-S6(DSY)",
-      "session_type": "Lecture",
-      "raw_cell_text": "SY3-S6(\nDSY)\nMDCP\nNC-14"
     },
     {
       "division": "SY CSE Div 3",
@@ -1179,9 +1101,9 @@ window.TIMETABLE_DATA = {
       "faculty": "Afsha Akkalkot",
       "room_number": "DBMSL",
       "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-      "batch": "SY3-S6(DSY)",
+      "batch": "SY3-S1",
       "session_type": "Lab",
-      "raw_cell_text": "SY3-S6(DSY)\nDBMSL PPL Lab"
+      "raw_cell_text": "SY3-S1\nDBMSL PPL Lab"
     },
     {
       "division": "SY CSE Div 3",
@@ -1278,27 +1200,27 @@ window.TIMETABLE_DATA = {
       "division": "SY CSE Div 3",
       "day": "Friday",
       "time_slot": "10:30 - 12:30",
-      "subject_name": "Principles of Programming Languages Lab",
-      "subject_code": "PPL Lab",
-      "faculty": "Afsha Akkalkot",
-      "room_number": "DBMSL",
-      "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-      "batch": "SY3-S1",
-      "session_type": "Lab",
-      "raw_cell_text": "SY3-S1\nDBMSL PPL Lab"
-    },
-    {
-      "division": "SY CSE Div 3",
-      "day": "Friday",
-      "time_slot": "10:30 - 12:30",
       "subject_name": "Data Structures and Algorithms Lab",
       "subject_code": "DSA Lab",
       "faculty": "Prachiti Deshpande",
       "room_number": "PL",
       "room_name": "Programming Lab, Ground Floor, CSE Dept",
-      "batch": "SY3-S6(DSY)",
+      "batch": "SY3-S1",
       "session_type": "Lab",
-      "raw_cell_text": "SY3-S6(DSY)\nPL DSA Lab"
+      "raw_cell_text": "SY3-S1\nPL DSA Lab"
+    },
+    {
+      "division": "SY CSE Div 3",
+      "day": "Friday",
+      "time_slot": "10:30 - 12:30",
+      "subject_name": "Principles of Programming Languages Lab",
+      "subject_code": "PPL Lab",
+      "faculty": "Afsha Akkalkot",
+      "room_number": "DBMSL",
+      "room_name": "DBMS Lab, 1st Floor, CSE Dept",
+      "batch": "SY3-S2",
+      "session_type": "Lab",
+      "raw_cell_text": "SY3-S2\nDBMSL PPL Lab"
     },
     {
       "division": "SY CSE Div 4",
@@ -1306,12 +1228,12 @@ window.TIMETABLE_DATA = {
       "time_slot": "09:30 - 10:30",
       "subject_name": "Matrices, Differential Calculus and Probability",
       "subject_code": "MDCP",
-      "faculty": "Maths Teacher2",
-      "room_number": "NC-14-",
-      "room_name": "NC14-, 4th Floor, Academic Compex",
-      "batch": "SY4-S6(DSY)",
+      "faculty": "Maths Teacher1",
+      "room_number": "NC-14",
+      "room_name": "NC-14,, 4th Floor, Academic Compex",
+      "batch": "SY4-S5(DSY)",
       "session_type": "Lecture",
-      "raw_cell_text": "SY4-S6(\nDSY)\nMDCP\nNC-14-"
+      "raw_cell_text": "SY4-S5(DSY)\nNC-14 MDCP"
     },
     {
       "division": "SY CSE Div 4",
@@ -1394,6 +1316,19 @@ window.TIMETABLE_DATA = {
     {
       "division": "SY CSE Div 4",
       "day": "Monday",
+      "time_slot": "09:30 - 10:30",
+      "subject_name": "Matrices, Differential Calculus and Probability",
+      "subject_code": "MDCP",
+      "faculty": "Maths Teacher2",
+      "room_number": "NC-14",
+      "room_name": "NC-14,, 4th Floor, Academic Compex",
+      "batch": "SY4-S6(DSY)",
+      "session_type": "Lecture",
+      "raw_cell_text": "SY4-S6(DSY)\nNC-14- MDCP"
+    },
+    {
+      "division": "SY CSE Div 4",
+      "day": "Monday",
       "time_slot": "13:30 - 15:30",
       "subject_name": "Principles of Programming Languages Lab",
       "subject_code": "PPL Lab",
@@ -1410,12 +1345,12 @@ window.TIMETABLE_DATA = {
       "time_slot": "09:30 - 10:30",
       "subject_name": "Matrices, Differential Calculus and Probability",
       "subject_code": "MDCP",
-      "faculty": "Maths Teacher2",
-      "room_number": "NC-14-",
-      "room_name": "NC14-, 4th Floor, Academic Compex",
-      "batch": "SY4-S6(DSY)",
+      "faculty": "Maths Teacher1",
+      "room_number": "NC-14",
+      "room_name": "NC-14,, 4th Floor, Academic Compex",
+      "batch": "SY4-S5(DSY)",
       "session_type": "Lecture",
-      "raw_cell_text": "SY4-S6(\nDSY)\nMDCP\nNC-14-"
+      "raw_cell_text": "SY4-S5(DSY)\nNC-14 MDCP"
     },
     {
       "division": "SY CSE Div 4",
@@ -1434,19 +1369,6 @@ window.TIMETABLE_DATA = {
       "division": "SY CSE Div 4",
       "day": "Tuesday",
       "time_slot": "13:30 - 15:30",
-      "subject_name": "Data Structures and Algorithms Lab",
-      "subject_code": "DSA Lab",
-      "faculty": "Manisha Pawar",
-      "room_number": "PL",
-      "room_name": "Programming Lab, Ground Floor, CSE Dept",
-      "batch": "SY4-S3",
-      "session_type": "Lab",
-      "raw_cell_text": "SY4-S3\nPL DSA Lab"
-    },
-    {
-      "division": "SY CSE Div 4",
-      "day": "Tuesday",
-      "time_slot": "13:30 - 15:30",
       "subject_name": "Principles of Programming Languages Lab",
       "subject_code": "PPL Lab",
       "faculty": "Deepika Upadhey",
@@ -1458,16 +1380,42 @@ window.TIMETABLE_DATA = {
     },
     {
       "division": "SY CSE Div 4",
-      "day": "Wednesday",
+      "day": "Tuesday",
       "time_slot": "09:30 - 10:30",
       "subject_name": "Matrices, Differential Calculus and Probability",
       "subject_code": "MDCP",
       "faculty": "Maths Teacher2",
-      "room_number": "NC-14-",
-      "room_name": "NC14-, 4th Floor, Academic Compex",
+      "room_number": "NC-14",
+      "room_name": "NC-14,, 4th Floor, Academic Compex",
       "batch": "SY4-S6(DSY)",
       "session_type": "Lecture",
-      "raw_cell_text": "SY4-S6(\nDSY)\nMDCP\nNC-14-"
+      "raw_cell_text": "SY4-S6(DSY)\nNC-14- MDCP"
+    },
+    {
+      "division": "SY CSE Div 4",
+      "day": "Tuesday",
+      "time_slot": "13:30 - 15:30",
+      "subject_name": "Data Structures and Algorithms Lab",
+      "subject_code": "DSA Lab",
+      "faculty": "Manisha Pawar",
+      "room_number": "PL",
+      "room_name": "Programming Lab, Ground Floor, CSE Dept",
+      "batch": "SY4-S3",
+      "session_type": "Lab",
+      "raw_cell_text": "SY4-S3\nPL DSA Lab"
+    },
+    {
+      "division": "SY CSE Div 4",
+      "day": "Wednesday",
+      "time_slot": "09:30 - 10:30",
+      "subject_name": "Matrices, Differential Calculus and Probability",
+      "subject_code": "MDCP",
+      "faculty": "Maths Teacher1",
+      "room_number": "NC-14",
+      "room_name": "NC-14,, 4th Floor, Academic Compex",
+      "batch": "SY4-S5(DSY)",
+      "session_type": "Lecture",
+      "raw_cell_text": "SY4-S5(DSY)\nNC-14 MDCP"
     },
     {
       "division": "SY CSE Div 4",
@@ -1511,19 +1459,6 @@ window.TIMETABLE_DATA = {
     {
       "division": "SY CSE Div 4",
       "day": "Wednesday",
-      "time_slot": "15:30 - 17:30",
-      "subject_name": "Microprocessors Lab",
-      "subject_code": "MP Lab",
-      "faculty": "Shriganeshrajkumar Togare",
-      "room_number": "DMPL",
-      "room_name": "Digital and Microprocessor Lab, 1st Floor, Old CSE Bldg.",
-      "batch": "SY4-S6(DSY)",
-      "session_type": "Lab",
-      "raw_cell_text": "SY4-S6(DSY)\nDMPL MP Lab"
-    },
-    {
-      "division": "SY CSE Div 4",
-      "day": "Wednesday",
       "time_slot": "13:30 - 15:30",
       "subject_name": "Data Structures and Algorithms Lab",
       "subject_code": "DSA Lab",
@@ -1537,15 +1472,15 @@ window.TIMETABLE_DATA = {
     {
       "division": "SY CSE Div 4",
       "day": "Wednesday",
-      "time_slot": "15:30 - 17:30",
-      "subject_name": "Principles of Programming Languages Lab",
-      "subject_code": "PPL Lab",
-      "faculty": "Deepika Upadhey",
-      "room_number": "DBMSL",
-      "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-      "batch": "SY4-S2",
-      "session_type": "Lab",
-      "raw_cell_text": "SY4-S2\nDBMSL PPL Lab"
+      "time_slot": "09:30 - 10:30",
+      "subject_name": "Matrices, Differential Calculus and Probability",
+      "subject_code": "MDCP",
+      "faculty": "Maths Teacher2",
+      "room_number": "NC-14",
+      "room_name": "NC-14,, 4th Floor, Academic Compex",
+      "batch": "SY4-S6(DSY)",
+      "session_type": "Lecture",
+      "raw_cell_text": "SY4-S6(DSY)\nNC-14- MDCP"
     },
     {
       "division": "SY CSE Div 4",
@@ -1556,9 +1491,9 @@ window.TIMETABLE_DATA = {
       "faculty": "Deepika Upadhey",
       "room_number": "DBMSL",
       "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-      "batch": "SY4-S5",
+      "batch": "SY4-S5(DSY)",
       "session_type": "Lab",
-      "raw_cell_text": "SY4-S5\nDBMSL PPL Lab"
+      "raw_cell_text": "SY4-S5(DSY)\nDBMSL PPL Lab"
     },
     {
       "division": "SY CSE Div 4",
@@ -1584,7 +1519,7 @@ window.TIMETABLE_DATA = {
       "room_name": null,
       "batch": "ALL",
       "session_type": "Elective",
-      "raw_cell_text": "Open\nElective"
+      "raw_cell_text": "Open Elective"
     },
     {
       "division": "SY CSE Div 4",
@@ -1629,14 +1564,14 @@ window.TIMETABLE_DATA = {
       "division": "SY CSE Div 4",
       "day": "Thursday",
       "time_slot": "15:30 - 17:30",
-      "subject_name": "Data Structures and Algorithms Lab",
-      "subject_code": "DSA Lab",
+      "subject_name": "Data Structures and Algorithms",
+      "subject_code": "DSA",
       "faculty": "Manisha Pawar",
       "room_number": "PL",
       "room_name": "Programming Lab, Ground Floor, CSE Dept",
       "batch": "SY4-S1",
-      "session_type": "Lab",
-      "raw_cell_text": "SY4-S1\nDSA Lab\nPL"
+      "session_type": "Lecture",
+      "raw_cell_text": "SY4-S1\nDSA\nPL\nLab"
     },
     {
       "division": "SY CSE Div 4",
@@ -1655,19 +1590,6 @@ window.TIMETABLE_DATA = {
       "division": "SY CSE Div 4",
       "day": "Thursday",
       "time_slot": "13:30 - 15:30",
-      "subject_name": "Data Structures and Algorithms Lab",
-      "subject_code": "DSA Lab",
-      "faculty": "Manisha Pawar",
-      "room_number": "PL",
-      "room_name": "Programming Lab, Ground Floor, CSE Dept",
-      "batch": "SY4-S5",
-      "session_type": "Lab",
-      "raw_cell_text": "SY4-S5\nPL DSA Lab"
-    },
-    {
-      "division": "SY CSE Div 4",
-      "day": "Thursday",
-      "time_slot": "13:30 - 15:30",
       "subject_name": "Principles of Programming Languages Lab",
       "subject_code": "PPL Lab",
       "faculty": "Deepika Upadhey",
@@ -1676,6 +1598,45 @@ window.TIMETABLE_DATA = {
       "batch": "SY4-S6(DSY)",
       "session_type": "Lab",
       "raw_cell_text": "SY4-S6(DSY)\nDBMSL PPL Lab"
+    },
+    {
+      "division": "SY CSE Div 4",
+      "day": "Thursday",
+      "time_slot": "15:30 - 17:30",
+      "subject_name": "Principles of Programming Languages Lab",
+      "subject_code": "PPL Lab",
+      "faculty": "Deepika Upadhey",
+      "room_number": "DBMSL",
+      "room_name": "DBMS Lab, 1st Floor, CSE Dept",
+      "batch": "SY4-S2",
+      "session_type": "Lab",
+      "raw_cell_text": "SY4-S2\nDBMSL PPL Lab"
+    },
+    {
+      "division": "SY CSE Div 4",
+      "day": "Thursday",
+      "time_slot": "13:30 - 15:30",
+      "subject_name": "Data Structures and Algorithms Lab",
+      "subject_code": "DSA Lab",
+      "faculty": "Manisha Pawar",
+      "room_number": "PL",
+      "room_name": "Programming Lab, Ground Floor, CSE Dept",
+      "batch": "SY4-S5(DSY)",
+      "session_type": "Lab",
+      "raw_cell_text": "SY4-S5(DSY)\nPL DSA Lab"
+    },
+    {
+      "division": "SY CSE Div 4",
+      "day": "Thursday",
+      "time_slot": "15:30 - 17:30",
+      "subject_name": "Microprocessors Lab",
+      "subject_code": "MP Lab",
+      "faculty": "Shriganeshrajkumar Togare",
+      "room_number": "DMPL",
+      "room_name": "Digital and Microprocessor Lab, 1st Floor, Old CSE Bldg.",
+      "batch": "SY4-S6(DSY)",
+      "session_type": "Lab",
+      "raw_cell_text": "SY4-S6(DSY)\nDMPL MP Lab"
     },
     {
       "division": "SY CSE Div 4",
@@ -1688,7 +1649,7 @@ window.TIMETABLE_DATA = {
       "room_name": null,
       "batch": "ALL",
       "session_type": "Elective",
-      "raw_cell_text": "Open\nElective"
+      "raw_cell_text": "Open Elective"
     },
     {
       "division": "SY CSE Div 4",
@@ -1720,14 +1681,14 @@ window.TIMETABLE_DATA = {
       "division": "SY CSE Div 4",
       "day": "Friday",
       "time_slot": "13:30 - 15:30",
-      "subject_name": "Microprocessors Lab",
-      "subject_code": "MP Lab",
-      "faculty": "Pratibha Patil",
-      "room_number": "ISL",
-      "room_name": "Information Security Lab, 3rd Floor, ENTC Extension Building",
-      "batch": "SY4-S5",
+      "subject_name": "Data Structures and Algorithms Lab",
+      "subject_code": "DSA Lab",
+      "faculty": "Manisha Pawar",
+      "room_number": "PL",
+      "room_name": "Programming Lab, Ground Floor, CSE Dept",
+      "batch": "SY4-S6(DSY)",
       "session_type": "Lab",
-      "raw_cell_text": "SY4-S5\nISL MP Lab"
+      "raw_cell_text": "SY4-S6(DSY)\nPL DSA Lab"
     },
     {
       "division": "SY CSE Div 4",
@@ -1759,19 +1720,6 @@ window.TIMETABLE_DATA = {
       "division": "SY CSE Div 4",
       "day": "Friday",
       "time_slot": "13:30 - 15:30",
-      "subject_name": "Data Structures and Algorithms Lab",
-      "subject_code": "DSA Lab",
-      "faculty": "Manisha Pawar",
-      "room_number": "PL",
-      "room_name": "Programming Lab, Ground Floor, CSE Dept",
-      "batch": "SY4-S6(DSY)",
-      "session_type": "Lab",
-      "raw_cell_text": "SY4-S6(DSY)\nPL DSA Lab"
-    },
-    {
-      "division": "SY CSE Div 4",
-      "day": "Friday",
-      "time_slot": "13:30 - 15:30",
       "subject_name": "Principles of Programming Languages Lab",
       "subject_code": "PPL Lab",
       "faculty": "Deepika Upadhey",
@@ -1780,6 +1728,19 @@ window.TIMETABLE_DATA = {
       "batch": "SY4-S1",
       "session_type": "Lab",
       "raw_cell_text": "SY4-S1\nDBMSL PPL Lab"
+    },
+    {
+      "division": "SY CSE Div 4",
+      "day": "Friday",
+      "time_slot": "13:30 - 15:30",
+      "subject_name": "Microprocessors Lab",
+      "subject_code": "MP Lab",
+      "faculty": "Pratibha Patil",
+      "room_number": "ISL",
+      "room_name": "Information Security Lab, 3rd Floor, ENTC Extension Building",
+      "batch": "SY4-S5(DSY)",
+      "session_type": "Lab",
+      "raw_cell_text": "SY4-S5(DSY)\nISL MP Lab"
     }
   ],
   "division_timetables": {
@@ -1841,10 +1802,10 @@ window.TIMETABLE_DATA = {
           "subject": "DSA Lab",
           "batches": [
             "SY1-S2",
-            "SY1-S3",
             "SY1-S4",
             "SY1-S5",
-            "SY1-S1"
+            "SY1-S1",
+            "SY1-S3"
           ],
           "teacher": "Sujata Sonawane"
         },
@@ -1852,9 +1813,9 @@ window.TIMETABLE_DATA = {
           "subject": "PPL Lab",
           "batches": [
             "SY1-S3",
-            "SY1-S4",
             "SY1-S1",
-            "SY1-S2"
+            "SY1-S2",
+            "SY1-S4"
           ],
           "teacher": "Anuja Patil"
         },
@@ -1879,2105 +1840,15 @@ window.TIMETABLE_DATA = {
           ],
           "teacher": "Sangeeta Batra"
         }
-      ],
-      "entries": [
-        {
-          "division": "SY CSE Div 1",
-          "day": "Monday",
-          "time_slot": "09:30 - 10:30",
-          "subject_name": "Entrepreneurship",
-          "subject_code": "ENTSP",
-          "faculty": "Sangeeta Batra",
-          "room_number": "NC-08",
-          "room_name": "NC-08, 2nd Floor, Academic Complex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "ENTSP\nNC-08"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Monday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Satish Kumbhar",
-          "room_number": "DMPL",
-          "room_name": "Digital and Microprocessor Lab, 1st Floor, Old CSE Bldg.",
-          "batch": "SY1-S1",
-          "session_type": "Lab",
-          "raw_cell_text": "SY1-S1\nDMPL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Monday",
-          "time_slot": "13:30 - 14:30",
-          "subject_name": "Microprocessors",
-          "subject_code": "MP",
-          "faculty": "Satish Kumbhar",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "MP\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Monday",
-          "time_slot": "14:30 - 15:30",
-          "subject_name": "Data Structures and Algorithms",
-          "subject_code": "DSA",
-          "faculty": "Sujata Sonawane",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "DSA\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Monday",
-          "time_slot": "15:30 - 16:30",
-          "subject_name": "Language",
-          "subject_code": "LL",
-          "faculty": "Language Teacher1",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "LL\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Monday",
-          "time_slot": "16:30 - 17:30",
-          "subject_name": "Language",
-          "subject_code": "LL",
-          "faculty": "Language Teacher1",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "LL\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Monday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Sujata Sonawane",
-          "room_number": "FOSS2",
-          "room_name": "FOSS Lab, Column 2, 3rd Floor, ENTC Extension Building",
-          "batch": "SY1-S2",
-          "session_type": "Lab",
-          "raw_cell_text": "SY1-S2\nFOSS2 DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Monday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Anuja Patil",
-          "room_number": "ASL",
-          "room_name": "Advanced Software Lab, 1st Floor, CSE Dept",
-          "batch": "SY1-S3",
-          "session_type": "Lab",
-          "raw_cell_text": "SY1-S3\nASL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Tuesday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Satish Kumbhar",
-          "room_number": "DMPL",
-          "room_name": "Digital and Microprocessor Lab, 1st Floor, Old CSE Bldg.",
-          "batch": "SY1-S2",
-          "session_type": "Lab",
-          "raw_cell_text": "SY1-S2\nDMPL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Tuesday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Sujata Sonawane",
-          "room_number": "FOSS2",
-          "room_name": "FOSS Lab, Column 2, 3rd Floor, ENTC Extension Building",
-          "batch": "SY1-S3",
-          "session_type": "Lab",
-          "raw_cell_text": "SY1-S3\nFOSS2 DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Tuesday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Anuja Patil",
-          "room_number": "ASL",
-          "room_name": "Advanced Software Lab, 1st Floor, CSE Dept",
-          "batch": "SY1-S4",
-          "session_type": "Lab",
-          "raw_cell_text": "SY1-S4\nASL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Wednesday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Satish Kumbhar",
-          "room_number": "DMPL",
-          "room_name": "Digital and Microprocessor Lab, 1st Floor, Old CSE Bldg.",
-          "batch": "SY1-S3",
-          "session_type": "Lab",
-          "raw_cell_text": "SY1-S3\nDMPL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Wednesday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Sujata Sonawane",
-          "room_number": "FOSS2",
-          "room_name": "FOSS Lab, Column 2, 3rd Floor, ENTC Extension Building",
-          "batch": "SY1-S4",
-          "session_type": "Lab",
-          "raw_cell_text": "SY1-S4\nFOSS2 DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Wednesday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Sneha Chavan",
-          "room_number": "ASL",
-          "room_name": "Advanced Software Lab, 1st Floor, CSE Dept",
-          "batch": "SY1-S5",
-          "session_type": "Lab",
-          "raw_cell_text": "SY1-S5\nASL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Thursday",
-          "time_slot": "09:30 - 10:30",
-          "subject_name": "Open Elective",
-          "subject_code": "Open Elective",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Open\nElective"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Thursday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Satish Kumbhar",
-          "room_number": "DMPL",
-          "room_name": "Digital and Microprocessor Lab, 1st Floor, Old CSE Bldg.",
-          "batch": "SY1-S4",
-          "session_type": "Lab",
-          "raw_cell_text": "SY1-S4\nDMPL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Thursday",
-          "time_slot": "13:30 - 14:30",
-          "subject_name": "Principles of Programming Languages",
-          "subject_code": "PPL",
-          "faculty": "Afsha Akkalkot",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "PPL\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Thursday",
-          "time_slot": "14:30 - 15:30",
-          "subject_name": "Data Structures and Algorithms",
-          "subject_code": "DSA",
-          "faculty": "Sujata Sonawane",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "DSA\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Thursday",
-          "time_slot": "15:30 - 16:30",
-          "subject_name": "Microprocessors",
-          "subject_code": "MP",
-          "faculty": "Satish Kumbhar",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "MP\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Thursday",
-          "time_slot": "17:30 - 18:30",
-          "subject_name": "Honour / Minor Course",
-          "subject_code": "Honour/Minor",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Honour/\nMinor"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Thursday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Sujata Sonawane",
-          "room_number": "FOSS2",
-          "room_name": "FOSS Lab, Column 2, 3rd Floor, ENTC Extension Building",
-          "batch": "SY1-S5",
-          "session_type": "Lab",
-          "raw_cell_text": "SY1-S5\nFOSS2 DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Thursday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Anuja Patil",
-          "room_number": "ASL",
-          "room_name": "Advanced Software Lab, 1st Floor, CSE Dept",
-          "batch": "SY1-S1",
-          "session_type": "Lab",
-          "raw_cell_text": "SY1-S1\nASL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Friday",
-          "time_slot": "09:30 - 10:30",
-          "subject_name": "Open Elective",
-          "subject_code": "Open Elective",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Open\nElective"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Friday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Satish Kumbhar",
-          "room_number": "DMPL",
-          "room_name": "Digital and Microprocessor Lab, 1st Floor, Old CSE Bldg.",
-          "batch": "SY1-S5",
-          "session_type": "Lab",
-          "raw_cell_text": "SY1-S5\nDMPL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Friday",
-          "time_slot": "13:30 - 14:30",
-          "subject_name": "Principles of Programming Languages",
-          "subject_code": "PPL",
-          "faculty": "Afsha Akkalkot",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "PPL\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Friday",
-          "time_slot": "14:30 - 15:30",
-          "subject_name": "Microprocessors",
-          "subject_code": "MP",
-          "faculty": "Satish Kumbhar",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "MP\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Friday",
-          "time_slot": "15:30 - 16:30",
-          "subject_name": "Data Structures and Algorithms",
-          "subject_code": "DSA",
-          "faculty": "Sujata Sonawane",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "DSA\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Friday",
-          "time_slot": "16:30 - 17:30",
-          "subject_name": "Honour / Minor Course",
-          "subject_code": "Honour/Minor",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Honour/\nMinor"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Friday",
-          "time_slot": "17:30 - 18:30",
-          "subject_name": "Honour / Minor Course",
-          "subject_code": "Honour/Minor",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Honour/\nMinor"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Friday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Sujata Sonawane",
-          "room_number": "FOSS2",
-          "room_name": "FOSS Lab, Column 2, 3rd Floor, ENTC Extension Building",
-          "batch": "SY1-S1",
-          "session_type": "Lab",
-          "raw_cell_text": "SY1-S1\nFOSS2 DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 1",
-          "day": "Friday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Anuja Patil",
-          "room_number": "ASL",
-          "room_name": "Advanced Software Lab, 1st Floor, CSE Dept",
-          "batch": "SY1-S2",
-          "session_type": "Lab",
-          "raw_cell_text": "SY1-S2\nASL PPL Lab"
-        }
-      ]
-    },
-    "SY CSE Div 2": {
-      "pdf_file": "class_SY-Div2.pdf",
-      "rooms": {
-        "NC-02": "NC-02, 1st Floor, Academic Compex",
-        "DMPL": "Digital and Microprocessor Lab, 1st Floor, Old CSE Bldg.",
-        "FOSS2": "FOSS Lab, Column 2, 3rd Floor, ENTC Extension Building",
-        "NC-01": "NC-01, 1st Floor, Academic Compex",
-        "ASL": "Advanced Software Lab, 1st Floor, CSE Dept",
-        "NC-27": "NC05, 2nd Floor, Academic Compex"
-      },
-      "subjects": {
-        "LL": "Language",
-        "MP Lab": "Microprocessors Lab",
-        "DSA Lab": "Data Structures and Algorithms Lab",
-        "DSA": "Data Structures and Algorithms",
-        "PPL": "Principles of Programming Languages",
-        "MP": "Microprocessors",
-        "PPL Lab": "Principles of Programming Languages Lab",
-        "ENTSP": "Entrepreneurship",
-        "Open Elective": "Open Elective",
-        "Honour/Minor": "Honour / Minor Course"
-      },
-      "faculty_mappings": [
-        {
-          "subject": "LL",
-          "batches": [
-            "ALL"
-          ],
-          "teacher": "Language Teacher2"
-        },
-        {
-          "subject": "MP Lab",
-          "batches": [
-            "SY2-S1",
-            "SY2-S2",
-            "SY2-S3",
-            "SY2-S4",
-            "SY2-S5"
-          ],
-          "teacher": "Archana Deokate"
-        },
-        {
-          "subject": "DSA Lab",
-          "batches": [
-            "SY2-S3",
-            "SY2-S4",
-            "SY2-S2",
-            "SY2-S5"
-          ],
-          "teacher": "Tina Francis"
-        },
-        {
-          "subject": "DSA Lab",
-          "batches": [
-            "SY2-S1"
-          ],
-          "teacher": "Savita Adhav"
-        },
-        {
-          "subject": "DSA",
-          "batches": [
-            "ALL"
-          ],
-          "teacher": "Tina Francis"
-        },
-        {
-          "subject": "PPL",
-          "batches": [
-            "ALL"
-          ],
-          "teacher": "Deepika Upadhey"
-        },
-        {
-          "subject": "MP",
-          "batches": [
-            "ALL"
-          ],
-          "teacher": "Archana Deokate"
-        },
-        {
-          "subject": "PPL Lab",
-          "batches": [
-            "SY2-S4",
-            "SY2-S5",
-            "SY2-S2",
-            "SY2-S3",
-            "SY2-S1"
-          ],
-          "teacher": "Sneha Chavan"
-        },
-        {
-          "subject": "ENTSP",
-          "batches": [
-            "ALL"
-          ],
-          "teacher": "Sangeeta Batra"
-        }
-      ],
-      "entries": [
-        {
-          "division": "SY CSE Div 2",
-          "day": "Monday",
-          "time_slot": "10:30 - 11:30",
-          "subject_name": "Data Structures and Algorithms",
-          "subject_code": "DSA",
-          "faculty": "Tina Francis",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "DSA\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Monday",
-          "time_slot": "11:30 - 12:30",
-          "subject_name": "Microprocessors",
-          "subject_code": "MP",
-          "faculty": "Archana Deokate",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "MP\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Monday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Archana Deokate",
-          "room_number": "DMPL",
-          "room_name": "Digital and Microprocessor Lab, 1st Floor, Old CSE Bldg.",
-          "batch": "SY2-S1",
-          "session_type": "Lab",
-          "raw_cell_text": "SY2-S1\nDMPL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Monday",
-          "time_slot": "15:30 - 16:30",
-          "subject_name": "Language",
-          "subject_code": "LL",
-          "faculty": "Language Teacher2",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "LL\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Monday",
-          "time_slot": "16:30 - 17:30",
-          "subject_name": "Language",
-          "subject_code": "LL",
-          "faculty": "Language Teacher2",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "LL\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Monday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Tina Francis",
-          "room_number": "FOSS2",
-          "room_name": "FOSS Lab, Column 2, 3rd Floor, ENTC Extension Building",
-          "batch": "SY2-S2",
-          "session_type": "Lab",
-          "raw_cell_text": "SY2-S2\nFOSS2 DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Monday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Sneha Chavan",
-          "room_number": "ASL",
-          "room_name": "Advanced Software Lab, 1st Floor, CSE Dept",
-          "batch": "SY2-S3",
-          "session_type": "Lab",
-          "raw_cell_text": "SY2-S3\nASL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Tuesday",
-          "time_slot": "09:30 - 10:30",
-          "subject_name": "Entrepreneurship",
-          "subject_code": "ENTSP",
-          "faculty": "Sangeeta Batra",
-          "room_number": "NC-27",
-          "room_name": "NC05, 2nd Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "ENTSP\nNC-27"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Tuesday",
-          "time_slot": "10:30 - 11:30",
-          "subject_name": "Principles of Programming Languages",
-          "subject_code": "PPL",
-          "faculty": "Deepika Upadhey",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "PPL\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Tuesday",
-          "time_slot": "11:30 - 12:30",
-          "subject_name": "Data Structures and Algorithms",
-          "subject_code": "DSA",
-          "faculty": "Tina Francis",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "DSA\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Tuesday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Archana Deokate",
-          "room_number": "DMPL",
-          "room_name": "Digital and Microprocessor Lab, 1st Floor, Old CSE Bldg.",
-          "batch": "SY2-S2",
-          "session_type": "Lab",
-          "raw_cell_text": "SY2-S2\nDMPL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Tuesday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Tina Francis",
-          "room_number": "FOSS2",
-          "room_name": "FOSS Lab, Column 2, 3rd Floor, ENTC Extension Building",
-          "batch": "SY2-S3",
-          "session_type": "Lab",
-          "raw_cell_text": "SY2-S3\nFOSS2 DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Tuesday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Sneha Chavan",
-          "room_number": "ASL",
-          "room_name": "Advanced Software Lab, 1st Floor, CSE Dept",
-          "batch": "SY2-S4",
-          "session_type": "Lab",
-          "raw_cell_text": "SY2-S4\nASL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Wednesday",
-          "time_slot": "10:30 - 11:30",
-          "subject_name": "Data Structures and Algorithms",
-          "subject_code": "DSA",
-          "faculty": "Tina Francis",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "DSA\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Wednesday",
-          "time_slot": "11:30 - 12:30",
-          "subject_name": "Microprocessors",
-          "subject_code": "MP",
-          "faculty": "Archana Deokate",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "MP\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Wednesday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Archana Deokate",
-          "room_number": "DMPL",
-          "room_name": "Digital and Microprocessor Lab, 1st Floor, Old CSE Bldg.",
-          "batch": "SY2-S3",
-          "session_type": "Lab",
-          "raw_cell_text": "SY2-S3\nDMPL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Wednesday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Tina Francis",
-          "room_number": "FOSS2",
-          "room_name": "FOSS Lab, Column 2, 3rd Floor, ENTC Extension Building",
-          "batch": "SY2-S4",
-          "session_type": "Lab",
-          "raw_cell_text": "SY2-S4\nFOSS2 DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Wednesday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Sneha Chavan",
-          "room_number": "ASL",
-          "room_name": "Advanced Software Lab, 1st Floor, CSE Dept",
-          "batch": "SY2-S5",
-          "session_type": "Lab",
-          "raw_cell_text": "SY2-S5\nASL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Thursday",
-          "time_slot": "09:30 - 10:30",
-          "subject_name": "Open Elective",
-          "subject_code": "Open Elective",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Open\nElective"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Thursday",
-          "time_slot": "10:30 - 11:30",
-          "subject_name": "Microprocessors",
-          "subject_code": "MP",
-          "faculty": "Archana Deokate",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "MP\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Thursday",
-          "time_slot": "11:30 - 12:30",
-          "subject_name": "Principles of Programming Languages",
-          "subject_code": "PPL",
-          "faculty": "Deepika Upadhey",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "PPL\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Thursday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Archana Deokate",
-          "room_number": "DMPL",
-          "room_name": "Digital and Microprocessor Lab, 1st Floor, Old CSE Bldg.",
-          "batch": "SY2-S4",
-          "session_type": "Lab",
-          "raw_cell_text": "SY2-S4\nDMPL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Thursday",
-          "time_slot": "17:30 - 18:30",
-          "subject_name": "Honour / Minor Course",
-          "subject_code": "Honour/Minor",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Honour/\nMinor"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Thursday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Tina Francis",
-          "room_number": "FOSS2",
-          "room_name": "FOSS Lab, Column 2, 3rd Floor, ENTC Extension Building",
-          "batch": "SY2-S5",
-          "session_type": "Lab",
-          "raw_cell_text": "SY2-S5\nFOSS2 DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Thursday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Sneha Chavan",
-          "room_number": "ASL",
-          "room_name": "Advanced Software Lab, 1st Floor, CSE Dept",
-          "batch": "SY2-S1",
-          "session_type": "Lab",
-          "raw_cell_text": "SY2-S1\nASL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Friday",
-          "time_slot": "09:30 - 10:30",
-          "subject_name": "Open Elective",
-          "subject_code": "Open Elective",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Open\nElective"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Friday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Archana Deokate",
-          "room_number": "DMPL",
-          "room_name": "Digital and Microprocessor Lab, 1st Floor, Old CSE Bldg.",
-          "batch": "SY2-S5",
-          "session_type": "Lab",
-          "raw_cell_text": "SY2-S5\nDMPL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Friday",
-          "time_slot": "16:30 - 17:30",
-          "subject_name": "Honour / Minor Course",
-          "subject_code": "Honour/Minor",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Honour/\nMinor"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Friday",
-          "time_slot": "17:30 - 18:30",
-          "subject_name": "Honour / Minor Course",
-          "subject_code": "Honour/Minor",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Honour/\nMinor"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Friday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Savita Adhav",
-          "room_number": "FOSS2",
-          "room_name": "FOSS Lab, Column 2, 3rd Floor, ENTC Extension Building",
-          "batch": "SY2-S1",
-          "session_type": "Lab",
-          "raw_cell_text": "SY2-S1\nFOSS2 DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 2",
-          "day": "Friday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Sneha Chavan",
-          "room_number": "ASL",
-          "room_name": "Advanced Software Lab, 1st Floor, CSE Dept",
-          "batch": "SY2-S2",
-          "session_type": "Lab",
-          "raw_cell_text": "SY2-S2\nASL PPL Lab"
-        }
-      ]
-    },
-    "SY CSE Div 3": {
-      "pdf_file": "class_SY-Div3.pdf",
-      "rooms": {
-        "NC-01": "NC-01, 1st Floor, Academic Compex",
-        "NC-14": "NC-14,, 4th Floor, Academic Compex",
-        "ISL": "Information Security Lab, 3rd Floor, ENTC Extension Building",
-        "PL": "Programming Lab, Ground Floor, CSE Dept",
-        "DBMSL": "DBMS Lab, 1st Floor, CSE Dept",
-        "NC-02": "NC-02, 1st Floor, Academic Compex",
-        "NC-03": "NC-03, 1st Floor, Academic Compex_"
-      },
-      "subjects": {
-        "ENTSP": "Entrepreneurship",
-        "MDCP": "Matrices, Differential Calculus and Probability",
-        "MP Lab": "Microprocessors Lab",
-        "DSA Lab": "Data Structures and Algorithms Lab",
-        "PPL Lab": "Principles of Programming Languages Lab",
-        "PPL": "Principles of Programming Languages",
-        "MP": "Microprocessors",
-        "DSA": "Data Structures and Algorithms",
-        "LL": "Language",
-        "Open Elective": "Open Elective",
-        "Honour/Minor": "Honour / Minor Course"
-      },
-      "faculty_mappings": [
-        {
-          "subject": "ENTSP",
-          "batches": [
-            "ALL"
-          ],
-          "teacher": "Sangeeta Batra"
-        },
-        {
-          "subject": "MDCP",
-          "batches": [
-            "SY3-S6(DSY)"
-          ],
-          "teacher": "Maths Teacher1"
-        },
-        {
-          "subject": "MP Lab",
-          "batches": [
-            "SY3-S1",
-            "SY3-S2",
-            "SY3-S3",
-            "SY3-S4",
-            "SY3-S5"
-          ],
-          "teacher": "Akshata Suryavanshi"
-        },
-        {
-          "subject": "DSA Lab",
-          "batches": [
-            "SY3-S2",
-            "SY3-S3",
-            "SY3-S4",
-            "SY3-S5",
-            "SY3-S1",
-            "SY3-S6(DSY)"
-          ],
-          "teacher": "Prachiti Deshpande"
-        },
-        {
-          "subject": "PPL Lab",
-          "batches": [
-            "SY3-S3",
-            "SY3-S4",
-            "SY3-S5",
-            "SY3-S6(DSY)",
-            "SY3-S1",
-            "SY3-S2"
-          ],
-          "teacher": "Afsha Akkalkot"
-        },
-        {
-          "subject": "PPL",
-          "batches": [
-            "ALL"
-          ],
-          "teacher": "Afsha Akkalkot"
-        },
-        {
-          "subject": "MP",
-          "batches": [
-            "ALL"
-          ],
-          "teacher": "Akshata Suryavanshi"
-        },
-        {
-          "subject": "DSA",
-          "batches": [
-            "ALL"
-          ],
-          "teacher": "Sujata Sonawane"
-        },
-        {
-          "subject": "MP Lab",
-          "batches": [
-            "SY3-S6(DSY)"
-          ],
-          "teacher": "Snehal Banarase"
-        },
-        {
-          "subject": "LL",
-          "batches": [
-            "ALL"
-          ],
-          "teacher": "Language Teacher3"
-        }
-      ],
-      "entries": [
-        {
-          "division": "SY CSE Div 3",
-          "day": "Monday",
-          "time_slot": "09:30 - 10:30",
-          "subject_name": "Matrices, Differential Calculus and Probability",
-          "subject_code": "MDCP",
-          "faculty": "Maths Teacher1",
-          "room_number": "NC-14",
-          "room_name": "NC-14,, 4th Floor, Academic Compex",
-          "batch": "SY3-S6(DSY)",
-          "session_type": "Lecture",
-          "raw_cell_text": "SY3-S6(\nDSY)\nMDCP\nNC-14"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Monday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Akshata Suryavanshi",
-          "room_number": "ISL",
-          "room_name": "Information Security Lab, 3rd Floor, ENTC Extension Building",
-          "batch": "SY3-S1",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S1\nISL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Monday",
-          "time_slot": "13:30 - 14:30",
-          "subject_name": "Data Structures and Algorithms",
-          "subject_code": "DSA",
-          "faculty": "Sujata Sonawane",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "DSA\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Monday",
-          "time_slot": "14:30 - 15:30",
-          "subject_name": "Microprocessors",
-          "subject_code": "MP",
-          "faculty": "Akshata Suryavanshi",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "MP\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Monday",
-          "time_slot": "15:30 - 16:30",
-          "subject_name": "Language",
-          "subject_code": "LL",
-          "faculty": "Language Teacher3",
-          "room_number": "NC-03",
-          "room_name": "NC-03, 1st Floor, Academic Compex_",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "LL\nNC-03"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Monday",
-          "time_slot": "16:30 - 17:30",
-          "subject_name": "Language",
-          "subject_code": "LL",
-          "faculty": "Language Teacher3",
-          "room_number": "NC-03",
-          "room_name": "NC-03, 1st Floor, Academic Compex_",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "LL\nNC-03"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Monday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Prachiti Deshpande",
-          "room_number": "PL",
-          "room_name": "Programming Lab, Ground Floor, CSE Dept",
-          "batch": "SY3-S2",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S2\nPL DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Monday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Afsha Akkalkot",
-          "room_number": "DBMSL",
-          "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-          "batch": "SY3-S3",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S3\nDBMSL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Tuesday",
-          "time_slot": "09:30 - 10:30",
-          "subject_name": "Matrices, Differential Calculus and Probability",
-          "subject_code": "MDCP",
-          "faculty": "Maths Teacher1",
-          "room_number": "NC-14",
-          "room_name": "NC-14,, 4th Floor, Academic Compex",
-          "batch": "SY3-S6(DSY)",
-          "session_type": "Lecture",
-          "raw_cell_text": "SY3-S6(\nDSY)\nMDCP\nNC-14"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Tuesday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Akshata Suryavanshi",
-          "room_number": "ISL",
-          "room_name": "Information Security Lab, 3rd Floor, ENTC Extension Building",
-          "batch": "SY3-S2",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S2\nISL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Tuesday",
-          "time_slot": "15:30 - 17:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Snehal Banarase",
-          "room_number": "ISL",
-          "room_name": "Information Security Lab, 3rd Floor, ENTC Extension Building",
-          "batch": "SY3-S6(DSY)",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S6(DSY)\nISL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Tuesday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Prachiti Deshpande",
-          "room_number": "PL",
-          "room_name": "Programming Lab, Ground Floor, CSE Dept",
-          "batch": "SY3-S3",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S3\nPL DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Tuesday",
-          "time_slot": "15:30 - 17:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Prachiti Deshpande",
-          "room_number": "PL",
-          "room_name": "Programming Lab, Ground Floor, CSE Dept",
-          "batch": "SY3-S1",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S1\nPL DSA\nLab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Tuesday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Afsha Akkalkot",
-          "room_number": "DBMSL",
-          "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-          "batch": "SY3-S4",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S4\nDBMSL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Tuesday",
-          "time_slot": "15:30 - 17:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Afsha Akkalkot",
-          "room_number": "DBMSL",
-          "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-          "batch": "SY3-S2",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S2\nDBMSL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Wednesday",
-          "time_slot": "08:30 - 09:30",
-          "subject_name": "Entrepreneurship",
-          "subject_code": "ENTSP",
-          "faculty": "Sangeeta Batra",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "ENTSP\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Wednesday",
-          "time_slot": "09:30 - 10:30",
-          "subject_name": "Matrices, Differential Calculus and Probability",
-          "subject_code": "MDCP",
-          "faculty": "Maths Teacher1",
-          "room_number": "NC-14",
-          "room_name": "NC-14,, 4th Floor, Academic Compex",
-          "batch": "SY3-S6(DSY)",
-          "session_type": "Lecture",
-          "raw_cell_text": "SY3-S6(\nDSY)\nMDCP\nNC-14"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Wednesday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Akshata Suryavanshi",
-          "room_number": "ISL",
-          "room_name": "Information Security Lab, 3rd Floor, ENTC Extension Building",
-          "batch": "SY3-S3",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S3\nISL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Wednesday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Prachiti Deshpande",
-          "room_number": "PL",
-          "room_name": "Programming Lab, Ground Floor, CSE Dept",
-          "batch": "SY3-S4",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S4\nPL DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Wednesday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Afsha Akkalkot",
-          "room_number": "DBMSL",
-          "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-          "batch": "SY3-S5",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S5\nDBMSL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Thursday",
-          "time_slot": "09:30 - 10:30",
-          "subject_name": "Open Elective",
-          "subject_code": "Open Elective",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Open\nElective"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Thursday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Akshata Suryavanshi",
-          "room_number": "ISL",
-          "room_name": "Information Security Lab, 3rd Floor, ENTC Extension Building",
-          "batch": "SY3-S4",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S4\nISL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Thursday",
-          "time_slot": "13:30 - 14:30",
-          "subject_name": "Microprocessors",
-          "subject_code": "MP",
-          "faculty": "Akshata Suryavanshi",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "MP\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Thursday",
-          "time_slot": "14:30 - 15:30",
-          "subject_name": "Principles of Programming Languages",
-          "subject_code": "PPL",
-          "faculty": "Afsha Akkalkot",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "PPL\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Thursday",
-          "time_slot": "15:30 - 16:30",
-          "subject_name": "Data Structures and Algorithms",
-          "subject_code": "DSA",
-          "faculty": "Sujata Sonawane",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "DSA\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Thursday",
-          "time_slot": "17:30 - 18:30",
-          "subject_name": "Honour / Minor Course",
-          "subject_code": "Honour/Minor",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Honour/\nMinor"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Thursday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Prachiti Deshpande",
-          "room_number": "PL",
-          "room_name": "Programming Lab, Ground Floor, CSE Dept",
-          "batch": "SY3-S5",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S5\nPL DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Thursday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Afsha Akkalkot",
-          "room_number": "DBMSL",
-          "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-          "batch": "SY3-S6(DSY)",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S6(DSY)\nDBMSL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Friday",
-          "time_slot": "09:30 - 10:30",
-          "subject_name": "Open Elective",
-          "subject_code": "Open Elective",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Open\nElective"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Friday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Akshata Suryavanshi",
-          "room_number": "ISL",
-          "room_name": "Information Security Lab, 3rd Floor, ENTC Extension Building",
-          "batch": "SY3-S5",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S5\nISL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Friday",
-          "time_slot": "13:30 - 14:30",
-          "subject_name": "Data Structures and Algorithms",
-          "subject_code": "DSA",
-          "faculty": "Sujata Sonawane",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "DSA\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Friday",
-          "time_slot": "14:30 - 15:30",
-          "subject_name": "Principles of Programming Languages",
-          "subject_code": "PPL",
-          "faculty": "Afsha Akkalkot",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "PPL\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Friday",
-          "time_slot": "15:30 - 16:30",
-          "subject_name": "Microprocessors",
-          "subject_code": "MP",
-          "faculty": "Akshata Suryavanshi",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "MP\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Friday",
-          "time_slot": "16:30 - 17:30",
-          "subject_name": "Honour / Minor Course",
-          "subject_code": "Honour/Minor",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Honour/\nMinor"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Friday",
-          "time_slot": "17:30 - 18:30",
-          "subject_name": "Honour / Minor Course",
-          "subject_code": "Honour/Minor",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Honour/\nMinor"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Friday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Afsha Akkalkot",
-          "room_number": "DBMSL",
-          "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-          "batch": "SY3-S1",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S1\nDBMSL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 3",
-          "day": "Friday",
-          "time_slot": "10:30 - 12:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Prachiti Deshpande",
-          "room_number": "PL",
-          "room_name": "Programming Lab, Ground Floor, CSE Dept",
-          "batch": "SY3-S6(DSY)",
-          "session_type": "Lab",
-          "raw_cell_text": "SY3-S6(DSY)\nPL DSA Lab"
-        }
-      ]
-    },
-    "SY CSE Div 4": {
-      "pdf_file": "class_SY-Div4.pdf",
-      "rooms": {
-        "NC-01": "NC-01, 1st Floor, Academic Compex",
-        "NC-14-": "NC14-, 4th Floor, Academic Compex",
-        "ISL": "Information Security Lab, 3rd Floor, ENTC Extension Building",
-        "PL": "Programming Lab, Ground Floor, CSE Dept",
-        "DBMSL": "DBMS Lab, 1st Floor, CSE Dept",
-        "NC-02": "NC-02, 1st Floor, Academic Compex",
-        "DMPL": "Digital and Microprocessor Lab, 1st Floor, Old CSE Bldg.",
-        "NC-06": "NC-06, 2nd Floor, Academic Compex"
-      },
-      "subjects": {
-        "ENTSP": "Entrepreneurship",
-        "MDCP": "Matrices, Differential Calculus and Probability",
-        "MP Lab": "Microprocessors Lab",
-        "DSA Lab": "Data Structures and Algorithms Lab",
-        "PPL Lab": "Principles of Programming Languages Lab",
-        "MP": "Microprocessors",
-        "DSA": "Data Structures and Algorithms",
-        "PPL": "Principles of Programming Languages",
-        "LL": "Language",
-        "Open Elective": "Open Elective",
-        "Honour/Minor": "Honour / Minor Course"
-      },
-      "faculty_mappings": [
-        {
-          "subject": "ENTSP",
-          "batches": [
-            "ALL"
-          ],
-          "teacher": "Sangeeta Batra"
-        },
-        {
-          "subject": "MDCP",
-          "batches": [
-            "SY4-S6(DSY)"
-          ],
-          "teacher": "Maths Teacher2"
-        },
-        {
-          "subject": "MP Lab",
-          "batches": [
-            "SY4-S1",
-            "SY4-S2",
-            "SY4-S3",
-            "SY4-S4",
-            "SY4-S5"
-          ],
-          "teacher": "Pratibha Patil"
-        },
-        {
-          "subject": "DSA Lab",
-          "batches": [
-            "SY4-S2",
-            "SY4-S3",
-            "SY4-S4",
-            "SY4-S5",
-            "SY4-S6(DSY)",
-            "SY4-S1"
-          ],
-          "teacher": "Manisha Pawar"
-        },
-        {
-          "subject": "PPL Lab",
-          "batches": [
-            "SY4-S3",
-            "SY4-S4",
-            "SY4-S5",
-            "SY4-S6(DSY)",
-            "SY4-S1",
-            "SY4-S2"
-          ],
-          "teacher": "Deepika Upadhey"
-        },
-        {
-          "subject": "MP",
-          "batches": [
-            "ALL"
-          ],
-          "teacher": "Pratibha Patil"
-        },
-        {
-          "subject": "DSA",
-          "batches": [
-            "ALL"
-          ],
-          "teacher": "Manisha Pawar"
-        },
-        {
-          "subject": "PPL",
-          "batches": [
-            "ALL"
-          ],
-          "teacher": "Deepika Upadhey"
-        },
-        {
-          "subject": "MP Lab",
-          "batches": [
-            "SY4-S6(DSY)"
-          ],
-          "teacher": "Shriganeshrajkumar Togare"
-        },
-        {
-          "subject": "LL",
-          "batches": [
-            "ALL"
-          ],
-          "teacher": "Language Teacher4"
-        }
-      ],
-      "entries": [
-        {
-          "division": "SY CSE Div 4",
-          "day": "Monday",
-          "time_slot": "09:30 - 10:30",
-          "subject_name": "Matrices, Differential Calculus and Probability",
-          "subject_code": "MDCP",
-          "faculty": "Maths Teacher2",
-          "room_number": "NC-14-",
-          "room_name": "NC14-, 4th Floor, Academic Compex",
-          "batch": "SY4-S6(DSY)",
-          "session_type": "Lecture",
-          "raw_cell_text": "SY4-S6(\nDSY)\nMDCP\nNC-14-"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Monday",
-          "time_slot": "10:30 - 11:30",
-          "subject_name": "Data Structures and Algorithms",
-          "subject_code": "DSA",
-          "faculty": "Manisha Pawar",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "DSA\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Monday",
-          "time_slot": "11:30 - 12:30",
-          "subject_name": "Principles of Programming Languages",
-          "subject_code": "PPL",
-          "faculty": "Deepika Upadhey",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "PPL\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Monday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Pratibha Patil",
-          "room_number": "ISL",
-          "room_name": "Information Security Lab, 3rd Floor, ENTC Extension Building",
-          "batch": "SY4-S1",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S1\nISL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Monday",
-          "time_slot": "15:30 - 16:30",
-          "subject_name": "Language",
-          "subject_code": "LL",
-          "faculty": "Language Teacher4",
-          "room_number": "NC-06",
-          "room_name": "NC-06, 2nd Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "LL\nNC-06"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Monday",
-          "time_slot": "16:30 - 17:30",
-          "subject_name": "Language",
-          "subject_code": "LL",
-          "faculty": "Language Teacher4",
-          "room_number": "NC-06",
-          "room_name": "NC-06, 2nd Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "LL\nNC-06"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Monday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Manisha Pawar",
-          "room_number": "PL",
-          "room_name": "Programming Lab, Ground Floor, CSE Dept",
-          "batch": "SY4-S2",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S2\nPL DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Monday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Deepika Upadhey",
-          "room_number": "DBMSL",
-          "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-          "batch": "SY4-S3",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S3\nDBMSL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Tuesday",
-          "time_slot": "09:30 - 10:30",
-          "subject_name": "Matrices, Differential Calculus and Probability",
-          "subject_code": "MDCP",
-          "faculty": "Maths Teacher2",
-          "room_number": "NC-14-",
-          "room_name": "NC14-, 4th Floor, Academic Compex",
-          "batch": "SY4-S6(DSY)",
-          "session_type": "Lecture",
-          "raw_cell_text": "SY4-S6(\nDSY)\nMDCP\nNC-14-"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Tuesday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Pratibha Patil",
-          "room_number": "ISL",
-          "room_name": "Information Security Lab, 3rd Floor, ENTC Extension Building",
-          "batch": "SY4-S2",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S2\nISL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Tuesday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Manisha Pawar",
-          "room_number": "PL",
-          "room_name": "Programming Lab, Ground Floor, CSE Dept",
-          "batch": "SY4-S3",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S3\nPL DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Tuesday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Deepika Upadhey",
-          "room_number": "DBMSL",
-          "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-          "batch": "SY4-S4",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S4\nDBMSL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Wednesday",
-          "time_slot": "09:30 - 10:30",
-          "subject_name": "Matrices, Differential Calculus and Probability",
-          "subject_code": "MDCP",
-          "faculty": "Maths Teacher2",
-          "room_number": "NC-14-",
-          "room_name": "NC14-, 4th Floor, Academic Compex",
-          "batch": "SY4-S6(DSY)",
-          "session_type": "Lecture",
-          "raw_cell_text": "SY4-S6(\nDSY)\nMDCP\nNC-14-"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Wednesday",
-          "time_slot": "10:30 - 11:30",
-          "subject_name": "Microprocessors",
-          "subject_code": "MP",
-          "faculty": "Pratibha Patil",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "MP\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Wednesday",
-          "time_slot": "11:30 - 12:30",
-          "subject_name": "Data Structures and Algorithms",
-          "subject_code": "DSA",
-          "faculty": "Manisha Pawar",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "DSA\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Wednesday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Pratibha Patil",
-          "room_number": "ISL",
-          "room_name": "Information Security Lab, 3rd Floor, ENTC Extension Building",
-          "batch": "SY4-S3",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S3\nISL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Wednesday",
-          "time_slot": "15:30 - 17:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Shriganeshrajkumar Togare",
-          "room_number": "DMPL",
-          "room_name": "Digital and Microprocessor Lab, 1st Floor, Old CSE Bldg.",
-          "batch": "SY4-S6(DSY)",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S6(DSY)\nDMPL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Wednesday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Manisha Pawar",
-          "room_number": "PL",
-          "room_name": "Programming Lab, Ground Floor, CSE Dept",
-          "batch": "SY4-S4",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S4\nPL DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Wednesday",
-          "time_slot": "15:30 - 17:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Deepika Upadhey",
-          "room_number": "DBMSL",
-          "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-          "batch": "SY4-S2",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S2\nDBMSL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Wednesday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Deepika Upadhey",
-          "room_number": "DBMSL",
-          "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-          "batch": "SY4-S5",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S5\nDBMSL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Thursday",
-          "time_slot": "08:30 - 09:30",
-          "subject_name": "Entrepreneurship",
-          "subject_code": "ENTSP",
-          "faculty": "Sangeeta Batra",
-          "room_number": "NC-01",
-          "room_name": "NC-01, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "ENTSP\nNC-01"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Thursday",
-          "time_slot": "09:30 - 10:30",
-          "subject_name": "Open Elective",
-          "subject_code": "Open Elective",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Open\nElective"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Thursday",
-          "time_slot": "10:30 - 11:30",
-          "subject_name": "Principles of Programming Languages",
-          "subject_code": "PPL",
-          "faculty": "Deepika Upadhey",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "PPL\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Thursday",
-          "time_slot": "11:30 - 12:30",
-          "subject_name": "Microprocessors",
-          "subject_code": "MP",
-          "faculty": "Pratibha Patil",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "MP\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Thursday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Pratibha Patil",
-          "room_number": "ISL",
-          "room_name": "Information Security Lab, 3rd Floor, ENTC Extension Building",
-          "batch": "SY4-S4",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S4\nISL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Thursday",
-          "time_slot": "15:30 - 17:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Manisha Pawar",
-          "room_number": "PL",
-          "room_name": "Programming Lab, Ground Floor, CSE Dept",
-          "batch": "SY4-S1",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S1\nDSA Lab\nPL"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Thursday",
-          "time_slot": "17:30 - 18:30",
-          "subject_name": "Honour / Minor Course",
-          "subject_code": "Honour/Minor",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Honour/\nMinor"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Thursday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Manisha Pawar",
-          "room_number": "PL",
-          "room_name": "Programming Lab, Ground Floor, CSE Dept",
-          "batch": "SY4-S5",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S5\nPL DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Thursday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Deepika Upadhey",
-          "room_number": "DBMSL",
-          "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-          "batch": "SY4-S6(DSY)",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S6(DSY)\nDBMSL PPL Lab"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Friday",
-          "time_slot": "09:30 - 10:30",
-          "subject_name": "Open Elective",
-          "subject_code": "Open Elective",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Open\nElective"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Friday",
-          "time_slot": "10:30 - 11:30",
-          "subject_name": "Data Structures and Algorithms",
-          "subject_code": "DSA",
-          "faculty": "Manisha Pawar",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "DSA\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Friday",
-          "time_slot": "11:30 - 12:30",
-          "subject_name": "Microprocessors",
-          "subject_code": "MP",
-          "faculty": "Pratibha Patil",
-          "room_number": "NC-02",
-          "room_name": "NC-02, 1st Floor, Academic Compex",
-          "batch": "ALL",
-          "session_type": "Lecture",
-          "raw_cell_text": "MP\nNC-02"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Friday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Microprocessors Lab",
-          "subject_code": "MP Lab",
-          "faculty": "Pratibha Patil",
-          "room_number": "ISL",
-          "room_name": "Information Security Lab, 3rd Floor, ENTC Extension Building",
-          "batch": "SY4-S5",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S5\nISL MP Lab"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Friday",
-          "time_slot": "16:30 - 17:30",
-          "subject_name": "Honour / Minor Course",
-          "subject_code": "Honour/Minor",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Honour/\nMinor"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Friday",
-          "time_slot": "17:30 - 18:30",
-          "subject_name": "Honour / Minor Course",
-          "subject_code": "Honour/Minor",
-          "faculty": null,
-          "room_number": null,
-          "room_name": null,
-          "batch": "ALL",
-          "session_type": "Elective",
-          "raw_cell_text": "Honour/\nMinor"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Friday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Data Structures and Algorithms Lab",
-          "subject_code": "DSA Lab",
-          "faculty": "Manisha Pawar",
-          "room_number": "PL",
-          "room_name": "Programming Lab, Ground Floor, CSE Dept",
-          "batch": "SY4-S6(DSY)",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S6(DSY)\nPL DSA Lab"
-        },
-        {
-          "division": "SY CSE Div 4",
-          "day": "Friday",
-          "time_slot": "13:30 - 15:30",
-          "subject_name": "Principles of Programming Languages Lab",
-          "subject_code": "PPL Lab",
-          "faculty": "Deepika Upadhey",
-          "room_number": "DBMSL",
-          "room_name": "DBMS Lab, 1st Floor, CSE Dept",
-          "batch": "SY4-S1",
-          "session_type": "Lab",
-          "raw_cell_text": "SY4-S1\nDBMSL PPL Lab"
-        }
       ]
     }
   }
 };
+
+// Export for Node.js / CommonJS
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = timetableData;
+}
+
+// Export for ES6 Modules
+// export default timetableData;
