@@ -1,16 +1,19 @@
 /**
  * COEP Tech CSE Timetable Portal - Core Application Logic
  * Odd Semester 2026–27 | S.Y. B.Tech Divisions 1 to 4
+ * Fully Responsive with Mobile Touch UI & Adaptive Layouts
  */
 
 // Application State
+const isMobileDevice = window.innerWidth < 768;
+
 const state = {
   data: null,
   selectedDivision: "SY CSE Div 1",
   selectedBatch: "ALL",
   selectedDay: "Monday",
   searchQuery: "",
-  viewMode: "grid", // 'grid' | 'day' | 'faculty' | 'room'
+  viewMode: isMobileDevice ? "day" : "grid", // Mobile defaults to Day Cards, Desktop to Grid
   isTimeMachineActive: false,
   simulatedDay: "Monday",
   simulatedTime: "10:45",
@@ -18,8 +21,9 @@ const state = {
   allEntries: []
 };
 
-// Days List
-const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+// Days List (Mon to Sat)
+const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const ACADEMIC_DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
 // Slot Columns Definitions
 const TIME_COLUMNS = [
@@ -42,6 +46,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initLucideIcons();
   setupEventListeners();
   initLiveClockAndTracker();
+  switchViewMode(state.viewMode);
   updateUI();
 });
 
@@ -132,7 +137,13 @@ function setupEventListeners() {
   document.getElementById("viewModeFacultyBtn").addEventListener("click", () => switchViewMode("faculty"));
   document.getElementById("viewModeRoomBtn").addEventListener("click", () => switchViewMode("room"));
 
-  // Day Agenda Tabs
+  // Switch to Day Cards button from mobile tip notice
+  const switchTipBtn = document.getElementById("switchToDayCardsBtn");
+  if (switchTipBtn) {
+    switchTipBtn.addEventListener("click", () => switchViewMode("day"));
+  }
+
+  // Day Agenda Tabs (Mon to Sat)
   document.querySelectorAll("#dayAgendaTabs .day-tab-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       state.selectedDay = btn.getAttribute("data-day");
@@ -282,30 +293,36 @@ function switchViewMode(mode) {
   Object.keys(buttons).forEach((key) => {
     const btn = buttons[key];
     const isCur = key === mode;
-    if (isCur) {
-      btn.classList.add("active", "bg-white", "dark:bg-brand-600", "text-slate-900", "dark:text-white", "shadow-xs");
-      btn.classList.remove("text-slate-600", "dark:text-slate-300");
-    } else {
-      btn.classList.remove("active", "bg-white", "dark:bg-brand-600", "text-slate-900", "dark:text-white", "shadow-xs");
-      btn.classList.add("text-slate-600", "dark:text-slate-300");
+    if (btn) {
+      if (isCur) {
+        btn.classList.add("active", "bg-white", "dark:bg-brand-600", "text-slate-900", "dark:text-white", "shadow-xs");
+        btn.classList.remove("text-slate-600", "dark:text-slate-300");
+      } else {
+        btn.classList.remove("active", "bg-white", "dark:bg-brand-600", "text-slate-900", "dark:text-white", "shadow-xs");
+        btn.classList.add("text-slate-600", "dark:text-slate-300");
+      }
     }
   });
 
   // Toggle containers
   Object.keys(containers).forEach((key) => {
-    if (key === mode) {
-      containers[key].classList.remove("hidden");
-    } else {
-      containers[key].classList.add("hidden");
+    if (containers[key]) {
+      if (key === mode) {
+        containers[key].classList.remove("hidden");
+      } else {
+        containers[key].classList.add("hidden");
+      }
     }
   });
 
   // Toggle batch wrapper for faculty/room modes
   const batchWrapper = document.getElementById("batchFilterWrapper");
-  if (mode === "faculty" || mode === "room") {
-    batchWrapper.classList.add("hidden");
-  } else {
-    batchWrapper.classList.remove("hidden");
+  if (batchWrapper) {
+    if (mode === "faculty" || mode === "room") {
+      batchWrapper.classList.add("hidden");
+    } else {
+      batchWrapper.classList.remove("hidden");
+    }
   }
 
   renderCurrentView();
@@ -369,7 +386,7 @@ function renderBatchPills() {
   batches.forEach((batch) => {
     const isSelected = state.selectedBatch === batch;
     const pill = document.createElement("button");
-    pill.className = `px-3 py-1 text-xs font-semibold rounded-lg transition-all ${
+    pill.className = `touch-target px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all ${
       isSelected
         ? "bg-brand-600 text-white shadow-xs"
         : "bg-slate-100 hover:bg-slate-200/80 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/80"
@@ -392,7 +409,7 @@ function renderBatchPills() {
 }
 
 /**
- * Render Weekly Timetable Grid
+ * Render Weekly Timetable Grid with Sticky Day Column & Top Headers
  */
 function renderTimetableGrid() {
   if (!state.data) return;
@@ -404,13 +421,13 @@ function renderTimetableGrid() {
 
   const divEntries = state.allEntries.filter((e) => e.division === state.selectedDivision);
 
-  DAYS.forEach((day) => {
+  ACADEMIC_DAYS.forEach((day) => {
     const row = document.createElement("tr");
     row.className = "hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors";
 
-    // Day Header Cell
+    // Sticky Left Day Header Cell
     const dayCell = document.createElement("td");
-    dayCell.className = "py-4 px-3 text-center font-bold text-xs sm:text-sm text-slate-900 dark:text-white sticky left-0 z-10 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 shadow-xs";
+    dayCell.className = "sticky-day-col py-4 px-3 text-center font-bold text-xs sm:text-sm text-slate-900 dark:text-white bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 shadow-xs";
     
     // Check if this day is today
     const currentDayName = getCurrentDayName();
@@ -435,7 +452,7 @@ function renderTimetableGrid() {
       // Lunch Slot (12:30 - 13:30)
       if (col.isLunch) {
         const lunchCell = document.createElement("td");
-        lunchCell.className = "p-1.5 text-center border-l border-slate-200 dark:border-slate-800/60";
+        lunchCell.className = "p-1.5 text-center border-r border-slate-200 dark:border-slate-800/60";
         lunchCell.innerHTML = `
           <div class="block-lunch h-24 rounded-xl flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 text-xs font-semibold select-none">
             <i data-lucide="coffee" class="w-4 h-4 mb-1"></i>
@@ -471,7 +488,7 @@ function renderTimetableGrid() {
       });
 
       const cell = document.createElement("td");
-      cell.className = "p-1.5 align-top border-l border-slate-200 dark:border-slate-800/60";
+      cell.className = "p-1.5 align-top border-r border-slate-200 dark:border-slate-800/60";
 
       if (has2HourBlock) {
         cell.colSpan = 2;
@@ -569,13 +586,31 @@ function createTimetableBlockCard(entry) {
 }
 
 /**
- * Render Day / Mobile Agenda Timeline View
+ * Render Day / Mobile Agenda Timeline View (Vertically Stacked Cards)
  */
 function renderDayAgendaView() {
   if (!state.data) return;
 
   const container = document.getElementById("dayAgendaTimeline");
   container.innerHTML = "";
+
+  // Handle Saturday specially
+  if (state.selectedDay === "Saturday") {
+    document.getElementById("dayAgendaSummaryBadge").textContent = "Weekend • Saturday";
+    container.innerHTML = `
+      <div class="p-8 text-center bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700/60 text-slate-500">
+        <div class="w-12 h-12 rounded-2xl bg-amber-100 dark:bg-amber-950/60 text-amber-500 flex items-center justify-center mx-auto mb-3">
+          <i data-lucide="sparkles" class="w-6 h-6"></i>
+        </div>
+        <div class="font-bold text-base text-slate-800 dark:text-slate-200">No Scheduled Classes on Saturday</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 max-w-sm mx-auto">
+          Academic timetable runs Monday through Friday. Saturdays are reserved for project work, club activities, and self-study.
+        </div>
+      </div>
+    `;
+    initLucideIcons();
+    return;
+  }
 
   const divEntries = state.allEntries.filter(
     (e) => e.division === state.selectedDivision && e.day === state.selectedDay
@@ -599,7 +634,7 @@ function renderDayAgendaView() {
     container.innerHTML = `
       <div class="p-8 text-center bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700/60 text-slate-500">
         <i data-lucide="sun" class="w-8 h-8 mx-auto mb-2 text-amber-500"></i>
-        <div class="font-bold text-base text-slate-800 dark:text-slate-200">No scheduled sessions for this filter</div>
+        <div class="font-bold text-base text-slate-800 dark:text-slate-200">No scheduled sessions for this batch filter</div>
         <div class="text-xs mt-1">Enjoy your free study or lab time!</div>
       </div>
     `;
@@ -609,52 +644,51 @@ function renderDayAgendaView() {
 
   filtered.forEach((entry) => {
     const card = document.createElement("div");
-    card.className = "relative pl-12 sm:pl-16 group";
+    card.className = "relative pl-10 sm:pl-16 group";
 
-    let colorBorder = "border-blue-500";
-    let iconName = "book-open";
+    let colorBorder = "border-blue-500 text-blue-500";
     let typeBadge = "Lecture";
+    let badgeClass = "bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300";
+    
     if (entry.session_type === "Lab") {
-      colorBorder = "border-emerald-500";
-      iconName = "flask-conical";
-      typeBadge = "Lab";
-    } else if (entry.session_type === "Elective") {
-      colorBorder = "border-amber-500";
-      iconName = "sparkles";
-      typeBadge = "Elective";
+      colorBorder = "border-emerald-500 text-emerald-500";
+      typeBadge = "2-Hour Lab";
+      badgeClass = "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300";
+    } else if (entry.session_type === "Elective" || entry.subject_code === "ENTSP" || entry.subject_code === "MDCP") {
+      colorBorder = "border-amber-500 text-amber-500";
+      typeBadge = "Elective / Special";
+      badgeClass = "bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300";
     }
 
     card.innerHTML = `
       <!-- Timeline Node Circle -->
-      <div class="absolute left-3.5 sm:left-4 top-4 w-5 h-5 rounded-full bg-white dark:bg-slate-900 border-2 ${colorBorder} z-10 flex items-center justify-center shadow-xs">
+      <div class="absolute left-2.5 sm:left-4 top-4 w-5 h-5 rounded-full bg-white dark:bg-slate-900 border-2 ${colorBorder} z-10 flex items-center justify-center shadow-xs">
         <div class="w-1.5 h-1.5 rounded-full bg-current"></div>
       </div>
 
-      <!-- Item Card -->
-      <div class="bg-slate-50 dark:bg-slate-800/80 hover:bg-slate-100/80 dark:hover:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700/80 transition-all shadow-xs cursor-pointer">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-          <div class="flex items-center gap-2">
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold ${
-              entry.session_type === "Lab" ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300" : "bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300"
-            }">
+      <!-- Item Card with Large Mobile Touch Target -->
+      <div class="bg-slate-50 dark:bg-slate-800/80 hover:bg-slate-100/90 dark:hover:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700/80 transition-all shadow-xs cursor-pointer active:scale-[0.99] touch-manipulation">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2.5">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold ${badgeClass}">
               ${typeBadge}
             </span>
-            ${entry.batch !== "ALL" ? `<span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300">${entry.batch}</span>` : ""}
-            <h4 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">${entry.subject_name} (${entry.subject_code})</h4>
+            ${entry.batch !== "ALL" ? `<span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300 font-mono">Batch ${entry.batch}</span>` : `<span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">Entire Division</span>`}
+            <h4 class="font-bold text-base text-slate-900 dark:text-white">${entry.subject_name} (${entry.subject_code})</h4>
           </div>
-          <div class="text-xs font-mono font-bold text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/60 px-2.5 py-1 rounded-lg border border-brand-200 dark:border-brand-800/60 self-start sm:self-auto">
+          <div class="text-xs font-mono font-bold text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/60 px-3 py-1 rounded-lg border border-brand-200 dark:border-brand-800/60 self-start sm:self-auto">
             ${entry.time_slot}
           </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600 dark:text-slate-300 pt-2 border-t border-slate-200 dark:border-slate-700/60">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600 dark:text-slate-300 pt-2.5 border-t border-slate-200 dark:border-slate-700/60">
           <div class="flex items-center gap-2">
-            <i data-lucide="user" class="w-3.5 h-3.5 text-slate-400"></i>
-            <span>Faculty: <strong>${entry.faculty || "Not Assigned / Open"}</strong></span>
+            <i data-lucide="user" class="w-4 h-4 text-slate-400 shrink-0"></i>
+            <span>Faculty: <strong>${entry.faculty || "Open / University Course"}</strong></span>
           </div>
           <div class="flex items-center gap-2">
-            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-400"></i>
-            <span>Location: <strong>${entry.room_number || "—"}</strong> (${entry.room_name || "N/A"})</span>
+            <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 shrink-0"></i>
+            <span>Room: <strong>${entry.room_number || "—"}</strong> (${entry.room_name || "N/A"})</span>
           </div>
         </div>
       </div>
@@ -702,7 +736,7 @@ function renderFacultySchedule(facultyName) {
   let html = `
     <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center justify-between flex-wrap gap-3">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold text-sm shadow-sm">
+        <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold text-sm shadow-sm shrink-0">
           ${facultyName.split(" ").map(n => n[0]).join("")}
         </div>
         <div>
@@ -712,22 +746,21 @@ function renderFacultySchedule(facultyName) {
       </div>
     </div>
 
-    <div class="overflow-x-auto">
-      <table class="w-full text-left text-xs border-collapse">
+    <div class="overflow-x-auto scrollbar-thin">
+      <table class="w-full text-left text-xs border-collapse min-w-[550px]">
         <thead>
           <tr class="border-b border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 font-bold uppercase text-slate-700 dark:text-slate-300">
-            <th class="py-2.5 px-3">Day</th>
-            <th class="py-2.5 px-3">Time Slot</th>
-            <th class="py-2.5 px-3">Division</th>
-            <th class="py-2.5 px-3">Batch</th>
-            <th class="py-2.5 px-3">Subject</th>
-            <th class="py-2.5 px-3">Room / Lab</th>
+            <th class="py-3 px-3">Day</th>
+            <th class="py-3 px-3">Time Slot</th>
+            <th class="py-3 px-3">Division</th>
+            <th class="py-3 px-3">Batch</th>
+            <th class="py-3 px-3">Subject</th>
+            <th class="py-3 px-3">Room / Lab</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
   `;
 
-  // Sort by Day and Time
   facultyEntries.sort((a, b) => {
     const dayDiff = DAYS.indexOf(a.day) - DAYS.indexOf(b.day);
     if (dayDiff !== 0) return dayDiff;
@@ -737,12 +770,12 @@ function renderFacultySchedule(facultyName) {
   facultyEntries.forEach((e) => {
     html += `
       <tr class="hover:bg-slate-100/50 dark:hover:bg-slate-800/40 transition-colors">
-        <td class="py-2.5 px-3 font-semibold text-slate-900 dark:text-white">${e.day}</td>
-        <td class="py-2.5 px-3 font-mono text-brand-600 dark:text-brand-400 font-semibold">${e.time_slot}</td>
-        <td class="py-2.5 px-3 font-medium">${e.division}</td>
-        <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-700 font-bold text-[10px]">${e.batch}</span></td>
-        <td class="py-2.5 px-3 font-medium">${e.subject_name} (${e.subject_code})</td>
-        <td class="py-2.5 px-3 font-semibold text-emerald-600 dark:text-emerald-400">${e.room_number || "—"}</td>
+        <td class="py-3 px-3 font-semibold text-slate-900 dark:text-white">${e.day}</td>
+        <td class="py-3 px-3 font-mono text-brand-600 dark:text-brand-400 font-semibold">${e.time_slot}</td>
+        <td class="py-3 px-3 font-medium">${e.division}</td>
+        <td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-700 font-bold text-[10px]">${e.batch}</span></td>
+        <td class="py-3 px-3 font-medium">${e.subject_name} (${e.subject_code})</td>
+        <td class="py-3 px-3 font-semibold text-emerald-600 dark:text-emerald-400">${e.room_number || "—"}</td>
       </tr>
     `;
   });
@@ -783,7 +816,7 @@ function renderRoomSchedule(roomCode) {
   let html = `
     <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center justify-between flex-wrap gap-3">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shadow-sm">
+        <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shadow-sm shrink-0">
           <i data-lucide="map-pin" class="w-5 h-5"></i>
         </div>
         <div>
@@ -793,16 +826,16 @@ function renderRoomSchedule(roomCode) {
       </div>
     </div>
 
-    <div class="overflow-x-auto">
-      <table class="w-full text-left text-xs border-collapse">
+    <div class="overflow-x-auto scrollbar-thin">
+      <table class="w-full text-left text-xs border-collapse min-w-[550px]">
         <thead>
           <tr class="border-b border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 font-bold uppercase text-slate-700 dark:text-slate-300">
-            <th class="py-2.5 px-3">Day</th>
-            <th class="py-2.5 px-3">Time Slot</th>
-            <th class="py-2.5 px-3">Division</th>
-            <th class="py-2.5 px-3">Batch</th>
-            <th class="py-2.5 px-3">Subject</th>
-            <th class="py-2.5 px-3">Faculty In-Charge</th>
+            <th class="py-3 px-3">Day</th>
+            <th class="py-3 px-3">Time Slot</th>
+            <th class="py-3 px-3">Division</th>
+            <th class="py-3 px-3">Batch</th>
+            <th class="py-3 px-3">Subject</th>
+            <th class="py-3 px-3">Faculty In-Charge</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
@@ -817,12 +850,12 @@ function renderRoomSchedule(roomCode) {
   roomEntries.forEach((e) => {
     html += `
       <tr class="hover:bg-slate-100/50 dark:hover:bg-slate-800/40 transition-colors">
-        <td class="py-2.5 px-3 font-semibold text-slate-900 dark:text-white">${e.day}</td>
-        <td class="py-2.5 px-3 font-mono text-brand-600 dark:text-brand-400 font-semibold">${e.time_slot}</td>
-        <td class="py-2.5 px-3 font-medium">${e.division}</td>
-        <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-700 font-bold text-[10px]">${e.batch}</span></td>
-        <td class="py-2.5 px-3 font-medium">${e.subject_name} (${e.subject_code})</td>
-        <td class="py-2.5 px-3 font-semibold text-slate-800 dark:text-slate-200">${e.faculty || "—"}</td>
+        <td class="py-3 px-3 font-semibold text-slate-900 dark:text-white">${e.day}</td>
+        <td class="py-3 px-3 font-mono text-brand-600 dark:text-brand-400 font-semibold">${e.time_slot}</td>
+        <td class="py-3 px-3 font-medium">${e.division}</td>
+        <td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-700 font-bold text-[10px]">${e.batch}</span></td>
+        <td class="py-3 px-3 font-medium">${e.subject_name} (${e.subject_code})</td>
+        <td class="py-3 px-3 font-semibold text-slate-800 dark:text-slate-200">${e.faculty || "—"}</td>
       </tr>
     `;
   });
@@ -939,7 +972,7 @@ function updateLiveTracker() {
   const subTitle = document.getElementById("trackerSubtitle");
 
   if (activeEntry) {
-    mainTitle.innerHTML = `<span class="text-emerald-400 font-extrabold">${activeEntry.subject_code}</span> in Progress (${activeEntry.room_number || "Online / Open"})`;
+    mainTitle.innerHTML = `<span class="text-emerald-400 font-extrabold">${activeEntry.subject_code}</span> in Progress (${activeEntry.room_number || "Open"})`;
     subTitle.textContent = `${activeEntry.subject_name} • Instructor: ${activeEntry.faculty || "Not Assigned"}`;
 
     // Update Active Card
@@ -1042,11 +1075,11 @@ function openClassDetailsModal(entry) {
   // Theme color for banner
   const banner = document.getElementById("modalHeaderBanner");
   if (entry.session_type === "Lab") {
-    banner.className = "p-6 bg-gradient-to-r from-emerald-600 to-teal-700 text-white relative";
+    banner.className = "p-5 sm:p-6 bg-gradient-to-r from-emerald-600 to-teal-700 text-white relative shrink-0";
   } else if (entry.session_type === "Elective") {
-    banner.className = "p-6 bg-gradient-to-r from-amber-600 to-orange-700 text-white relative";
+    banner.className = "p-5 sm:p-6 bg-gradient-to-r from-amber-600 to-orange-700 text-white relative shrink-0";
   } else {
-    banner.className = "p-6 bg-gradient-to-r from-brand-600 to-indigo-700 text-white relative";
+    banner.className = "p-5 sm:p-6 bg-gradient-to-r from-brand-600 to-indigo-700 text-white relative shrink-0";
   }
 
   modal.classList.remove("hidden");
@@ -1095,7 +1128,7 @@ function openLegendModal() {
     const item = document.createElement("div");
     item.className = "p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 flex items-start gap-2.5";
     item.innerHTML = `
-      <span class="px-2 py-1 rounded-md bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-mono font-bold text-xs">
+      <span class="px-2 py-1 rounded-md bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-mono font-bold text-xs shrink-0">
         ${code}
       </span>
       <div class="text-xs text-slate-700 dark:text-slate-300 leading-tight">
@@ -1114,7 +1147,7 @@ function openLegendModal() {
     const item = document.createElement("div");
     item.className = "p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 flex items-start gap-2.5";
     item.innerHTML = `
-      <span class="px-2 py-1 rounded-md bg-brand-100 text-brand-800 dark:bg-brand-950 dark:text-brand-300 font-mono font-bold text-xs">
+      <span class="px-2 py-1 rounded-md bg-brand-100 text-brand-800 dark:bg-brand-950 dark:text-brand-300 font-mono font-bold text-xs shrink-0">
         ${code}
       </span>
       <div class="text-xs text-slate-700 dark:text-slate-300 leading-tight">
@@ -1235,7 +1268,7 @@ function showToast(message, type = "info") {
 
   toast.className = `${bgColor} pointer-events-auto px-4 py-3 rounded-2xl shadow-xl border text-xs font-semibold flex items-center gap-2.5 transition-all duration-300 transform translate-y-4 opacity-0`;
   toast.innerHTML = `
-    <i data-lucide="${icon}" class="w-4 h-4"></i>
+    <i data-lucide="${icon}" class="w-4 h-4 shrink-0"></i>
     <span>${message}</span>
   `;
 
