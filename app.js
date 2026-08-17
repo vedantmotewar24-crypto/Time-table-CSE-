@@ -16,7 +16,7 @@ const state = {
   viewMode: isMobileDevice ? "day" : "grid", // Mobile defaults to Day Cards, Desktop to Grid
   isTimeMachineActive: false,
   simulatedDay: "Monday",
-  simulatedTime: "10:45",
+  simulatedTime: "13:45",
   theme: localStorage.getItem("coep_theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"),
   allEntries: []
 };
@@ -923,8 +923,29 @@ function getCurrentMinutesOfDay() {
 }
 
 function timeStrToMinutes(timeStr) {
-  const parts = timeStr.trim().split(":");
-  return parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);
+
+  const upperStr = timeStr.trim().toUpperCase();
+  const isPM = upperStr.includes("PM");
+  const isAM = upperStr.includes("AM");
+
+
+  const cleanTime = upperStr.replace(/[AM|PM]/g, "").trim();
+  const parts = cleanTime.split(":");
+  
+  let hours = parseInt(parts[0], 10);
+  const minutes = parseInt(parts[1], 10);
+
+  if (isPM || isAM) {
+    if (isPM && hours !== 12) {
+      hours += 12; 
+    }
+
+    if (isAM && hours === 12) {
+      hours = 0; 
+    }
+  }
+
+  return hours * 60 + minutes;
 }
 
 /**
