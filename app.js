@@ -16,7 +16,7 @@ const state = {
   viewMode: isMobileDevice ? "day" : "grid", // Mobile defaults to Day Cards, Desktop to Grid
   isTimeMachineActive: false,
   simulatedDay: "Monday",
-  simulatedTime: "13:45",
+  simulatedTime: "10:45",
   theme: localStorage.getItem("coep_theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"),
   allEntries: []
 };
